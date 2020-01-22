@@ -22,6 +22,19 @@ const injectContext = PassedComponent => {
 		);
 
 		useEffect(() => {
+			fetch("https://swapi.co/api/") // fetching data from SWAPI --- @EddyKudo
+				.then(function(response) {
+					if (!response.ok) {
+						throw Error(response.statusText);
+					}
+					return response.json();
+				})
+				.then(function(responseAsJson) {
+					console.log(responseAsJson);
+				})
+				.catch(function(error) {
+					console.log("Looks like there was a problem: \n", error);
+				});
 			/**
 			 * EDIT THIS!
 			 * This function is the equivalent to "window.onLoad", it only runs once on the entire application lifetime
