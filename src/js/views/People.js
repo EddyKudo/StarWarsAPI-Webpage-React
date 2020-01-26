@@ -7,11 +7,7 @@ export const People = props => {
 	return (
 		<div className="jumbotron row">
 			{store.people.map((person, index) => (
-				<Card
-					key={index}
-					name={person.name}
-					image="https://styles.redditmedia.com/t5_lf99r/styles/profileIcon_o6afu13cnh811.jpg"
-				/>
+				<Card key={index} name={person.name} image={store.peopleImages[index].urlImg} />
 			))}
 		</div>
 	);

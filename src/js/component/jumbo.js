@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Card } from "./card.js";
-import { people } from "../views/People";
+
 export const Jumbo = props => {
 	const { store, actions } = useContext(Context);
 

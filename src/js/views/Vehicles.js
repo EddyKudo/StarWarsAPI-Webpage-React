@@ -7,7 +7,7 @@ export const Vehicles = props => {
 	return (
 		<div className="jumbotron row">
 			{store.vehicles.map((vehicle, index) => (
-				<Card key={index} name={vehicle.name} image="https://wallpapercave.com/wp/wp2182707.jpg" />
+				<Card key={index} name={vehicle.name} image={store.vehImages[index].urlImg} />
 			))}
 		</div>
 	);
