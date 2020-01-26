@@ -1,5 +1,11 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
+import { Jumbo } from "../component/jumbo";
 
-export const Home = () => <div className="text-center mt-5 bg-dark text-info">Area for Components carousel</div>;
+export const Home = () => {
+	return (
+		<div>
+			<Jumbo />
+		</div>
+	);
+};

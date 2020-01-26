@@ -17,7 +17,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "Brown",
 					initial: "white"
 				}
-			]
+			],
+			people: [],
+			planets: [],
+			vehicles: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -27,7 +30,42 @@ const getState = ({ getStore, getActions, setStore }) => {
 			loadSomeData: () => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+                */
+				fetch("https://swapi.co/api/planets") // fetching planets from SWAPI --- @EddyKudo
+					.then(function(response) {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.then(data => setStore({ planets: data.results }))
+					.catch(function(error) {
+						console.log("Looks like there was a problem: \n", error);
+					});
+
+				fetch("https://swapi.co/api/people") // fetching planets from SWAPI --- @EddyKudo
+					.then(function(response) {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.then(data => setStore({ people: data.results }))
+					.catch(function(error) {
+						console.log("Looks like there was a problem: \n", error);
+					});
+
+				fetch("https://swapi.co/api/vehicles") // fetching planets from SWAPI --- @EddyKudo
+					.then(function(response) {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.then(data => setStore({ vehicles: data.results }))
+					.catch(function(error) {
+						console.log("Looks like there was a problem: \n", error);
+					});
 			},
 			changeColor: (index, color) => {
 				//get the store
