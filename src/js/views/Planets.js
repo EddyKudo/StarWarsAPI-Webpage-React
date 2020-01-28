@@ -7,7 +7,7 @@ export const Planets = props => {
 	return (
 		<div className="jumbotron row">
 			{store.planets.map((planet, index) => (
-				<Card key={index} name={planet.name} image={store.planetImages[index].urlImg} />
+				<Card key={index} data={planet} image={store.planetImages[index].urlImg} />
 			))}
 		</div>
 	);

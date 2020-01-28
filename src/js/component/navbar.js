@@ -12,8 +12,8 @@ export const Navbar = () => {
 					<input type="text" placeholder="Looking for..." />
 					<i className="far fa-eye mx-3 text-primary" />
 
-					<Link to="/demo">
-						<button className="btn btn-primary">Resourses</button>
+					<Link to="/Favotites">
+						<button className="btn btn-primary">Favorites</button>
 					</Link>
 				</div>
 			</nav>

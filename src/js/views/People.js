@@ -6,9 +6,10 @@ export const People = props => {
 	const { store, actions } = useContext(Context);
 	return (
 		<div className="jumbotron row">
-			{store.people.map((person, index) => (
-				<Card key={index} name={person.name} image={store.peopleImages[index].urlImg} />
-			))}
+			{store.people.length > 0 &&
+				store.people.map((person, index) => (
+					<Card key={index} data={person} image={store.peopleImages[index].urlImg} />
+				))}
 		</div>
 	);
 };

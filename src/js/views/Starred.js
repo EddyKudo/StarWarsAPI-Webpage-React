@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
-
-export const Demo = () => {
+//Former DEMO page, it's still here as an examle of action
+export const Starred = () => {
 	const { store, actions } = useContext(Context);
 
 	return (

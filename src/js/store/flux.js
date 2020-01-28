@@ -1,23 +1,6 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "People",
-					background: "Brown",
-					initial: "white"
-				},
-				{
-					title: "Planets",
-					background: "Brown",
-					initial: "white"
-				},
-				{
-					title: "Vehicles",
-					background: "Brown",
-					initial: "white"
-				}
-			],
 			people: [],
 			planets: [],
 			vehicles: [],
@@ -157,9 +140,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 					name: "Obi-Wan Kenobi",
 					urlImg: "https://styles.redditmedia.com/t5_lf99r/styles/profileIcon_o6afu13cnh811.jpg"
 				}
-			]
+			],
+			favorites: []
 		},
 		actions: {
+			toggleFavorite: person => {
+				let store = getStore();
+				let index = store.favorites.indexOf(person);
+				console.log(index);
+				if (index === -1) {
+					store.favorites.push(person);
+				} else {
+					store.favorites.splice(index, 1);
+				}
+			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
