@@ -8,7 +8,7 @@ export const Jumbo = props => {
 	return (
 		<div>
 			{store.people.length > 0 ? (
-				<div className="jumbotron row">
+				<div className="jumbotron row mx-auto w-100">
 					<Card
 						data={store.people[9]}
 						image="https://styles.redditmedia.com/t5_lf99r/styles/profileIcon_o6afu13cnh811.jpg"
