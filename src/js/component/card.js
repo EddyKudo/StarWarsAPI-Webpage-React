@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Image, Button, Modal, Jumbotron } from "react-bootstrap";
+import { Image, Button, Modal } from "react-bootstrap";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 
@@ -15,7 +15,7 @@ export const Card = props => {
 		actions.toggleFavorite(props.data);
 	};
 	return (
-		<div className="bg-white col-3">
+		<div className="bg-white col-3 border border-light rounded p-1">
 			<div className="d-flex">
 				<img className="my-2" src={props.image} alt="test" width="100%" />
 			</div>
@@ -30,7 +30,9 @@ export const Card = props => {
 				</h3>
 			</div>
 			<div>
-				<Button onClick={() => setModal(true)}>Read More...</Button>
+				<Button className="float-right mr-2 mb-1" onClick={() => setModal(true)}>
+					INFO
+				</Button>
 			</div>
 
 			<div>
@@ -40,6 +42,7 @@ export const Card = props => {
 					</Modal.Header>
 					<Modal.Body>
 						<Image src={props.image} width="100%" />
+						<pre>{Object.entries(props.data).join("\r\n")}</pre>
 					</Modal.Body>
 					<Button variant="danger" onClick={() => setModal(false)}>
 						Close
