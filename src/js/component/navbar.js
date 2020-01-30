@@ -6,7 +6,7 @@ export const Navbar = () => {
 		<div className="navigation">
 			<nav className="navbar navbar-light bg-dark pb-0">
 				<Link to="/">
-					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg" width="80px" />
+					<img src="https://i.imgur.com/5ZvtHwm.png" width="90px" />
 				</Link>
 				<div className="ml-auto">
 					<input type="text" placeholder="Looking for..." />

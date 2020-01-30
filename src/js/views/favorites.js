@@ -7,7 +7,7 @@ export const Favorites = props => {
 	return (
 		<div className="jumbotron row w-100 mx-auto">
 			{store.favorites.map((fav, index) => (
-				<Card key={index} data={fav} image={store.vehImages[index].urlImg} />
+				<Card key={index} data={fav} image={actions.getCorrectImage(fav)} />
 			))}
 		</div>
 	);

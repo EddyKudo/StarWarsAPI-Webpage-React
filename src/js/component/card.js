@@ -8,7 +8,11 @@ export const Card = props => {
 	const [selected, setSelected] = useState(false);
 	const [showModal, setModal] = useState(false);
 
-	console.log("data:", props.data);
+	const storeArray = [];
+
+	for (const [key, value] of Object.entries(props.data)) {
+		storeArray.push(`${key}:  ${value}`);
+	}
 
 	const handleClick = e => {
 		setSelected(!selected);
@@ -42,8 +46,13 @@ export const Card = props => {
 					</Modal.Header>
 					<Modal.Body>
 						<Image src={props.image} width="100%" />
-						<pre>{Object.entries(props.data).join("\r\n")}</pre>
+						<ul className="text-break">
+							{storeArray.map((e, index) => {
+								return <li key={index}>{e}</li>;
+							})}
+						</ul>
 					</Modal.Body>
+
 					<Button variant="danger" onClick={() => setModal(false)}>
 						Close
 					</Button>

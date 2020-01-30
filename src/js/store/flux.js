@@ -144,6 +144,26 @@ const getState = ({ getStore, getActions, setStore }) => {
 			favorites: []
 		},
 		actions: {
+			getCorrectImage: itemObject => {
+				// birth_year - person
+				// climate - planet
+				// crew - vehicles
+				let itemType = "";
+
+				if (itemObject.hasOwnProperty("crew")) {
+					itemType = "vehImages";
+				} else if (itemObject.hasOwnProperty("climate")) {
+					itemType = "planetImages";
+				} else {
+					itemType = "peopleImages";
+				}
+
+				// look @ itemObject to see which property it contains
+				let store = getStore();
+				let image = store[itemType].filter(item => itemObject.name === item.name)[0].urlImg;
+				return image;
+				// Then, we need to loop the correct array in the store for the images
+			},
 			toggleFavorite: person => {
 				let store = getStore();
 				let index = store.favorites.indexOf(person);
