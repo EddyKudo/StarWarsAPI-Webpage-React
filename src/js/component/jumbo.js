@@ -16,7 +16,7 @@ export const Jumbo = props => {
 					<Card data={store.people[1]} image="https://wallpapercave.com/wp/wp2182707.jpg" />
 					<Card
 						data={store.people[3]}
-						image="https://images.wallpaperscraft.com/image/star_wars_darth_vader_art_rain_102268_1600x1200.jpg"
+						image="https://www.highreshdwallpapers.com/wp-content/uploads/2017/05/Demonic-Darth-Vader-Wallpaper-1280x960.jpg"
 					/>
 					<Card data={store.people[0]} image="https://wallpapercave.com/wp/U3iXIJO.jpg" />
 				</div>

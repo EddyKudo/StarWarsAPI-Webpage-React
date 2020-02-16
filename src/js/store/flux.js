@@ -108,12 +108,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				},
 				{
 					name: "R2-D2",
-					urlImg: "https://images.wallpaperscraft.com/image/r2d2_drone_star_wars_toy_113637_1600x1200.jpg"
+					urlImg: "https://wallpapercave.com/wp/TCdVzW8.jpg"
 				},
 				{
 					name: "Darth Vader",
 					urlImg:
-						"https://images.wallpaperscraft.com/image/star_wars_darth_vader_art_rain_102268_1600x1200.jpg"
+						"https://www.highreshdwallpapers.com/wp-content/uploads/2017/05/Demonic-Darth-Vader-Wallpaper-1280x960.jpg"
 				},
 				{
 					name: "Leia Organa",
@@ -194,7 +194,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log("Looks like there was a problem: \n", error);
 					});
 
-				fetch("https://swapi.co/api/people") // fetching planets from SWAPI --- @EddyKudo
+				fetch("https://swapi.co/api/people") // fetching people from SWAPI --- @EddyKudo
 					.then(function(response) {
 						if (!response.ok) {
 							throw Error(response.statusText);
@@ -206,7 +206,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log("Looks like there was a problem: \n", error);
 					});
 
-				fetch("https://swapi.co/api/vehicles") // fetching planets from SWAPI --- @EddyKudo
+				fetch("https://swapi.co/api/vehicles") // fetching vehs from SWAPI --- @EddyKudo
 					.then(function(response) {
 						if (!response.ok) {
 							throw Error(response.statusText);
