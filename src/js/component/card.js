@@ -13,7 +13,6 @@ export const Card = props => {
 	for (const [key, value] of Object.entries(props.data)) {
 		storeArray.push(`${key}:  ${value}`);
 	}
-
 	const handleClick = e => {
 		setSelected(!selected);
 		actions.toggleFavorite(props.data);
