@@ -61,7 +61,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				},
 				{
 					name: "Yavin IV",
-					urlImg: "https://wallpapercan.com/download/1024x768/225a3cf4/planet-surface-space-moon.jpg"
+					urlImg: "https://wallpapersmug.com/download/1600x1200/bd919d/planet-surface-outer-space.jpg"
 				},
 				{
 					name: "Hoth",
