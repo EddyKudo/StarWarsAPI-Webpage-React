@@ -182,7 +182,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
                 */
-				fetch("https://swapi.dev/api/planets") // fetching planets from SWAPI --- @EddyKudo
+				fetch("https://swapi.dev/api/planets/") // fetching planets from SWAPI --- @EddyKudo
 					.then(function(response) {
 						if (!response.ok) {
 							throw Error(response.statusText);
@@ -194,7 +194,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log("Looks like there was a problem: \n", error);
 					});
 
-				fetch("https://swapi.dev/api/people") // fetching people from SWAPI --- @EddyKudo
+				fetch("https://swapi.dev/api/people/") // fetching people from SWAPI --- @EddyKudo
 					.then(function(response) {
 						if (!response.ok) {
 							throw Error(response.statusText);
@@ -206,7 +206,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log("Looks like there was a problem: \n", error);
 					});
 
-				fetch("https://swapi.dev/api/vehicles") // fetching vehs from SWAPI --- @EddyKudo
+				fetch("https://swapi.dev/api/vehicles/") // fetching vehs from SWAPI --- @EddyKudo
 					.then(function(response) {
 						if (!response.ok) {
 							throw Error(response.statusText);
